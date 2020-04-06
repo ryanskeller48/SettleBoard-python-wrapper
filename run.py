@@ -47,7 +47,7 @@ def main():
             p3 = str(sys.argv[6])
             s3 = sys.argv[7]
 
-            # make sure scores are integers and > 2 and < 11
+            # make sure scores are integers and >= 2 and <= 11
             tick = 1
             winners = 0
             scores = [s1, s2, s3]
@@ -71,7 +71,7 @@ def main():
                 p4 = str(sys.argv[8])
                 s4 = sys.argv[9]
                 
-                # make sure score 4 is an integer and > 2 and < 11
+                # make sure score 4 is an integer and >= 2 and <= 11
                 try:
                     score = int(score)
                     if score < 2:
@@ -83,7 +83,7 @@ def main():
                     elif score >= 10:
                         winners += 1
                     
-                    # verify there is exactly one winning (>10) score
+                    # verify there is exactly one winning (>=10) score
                     if winners < 1:
                         print ("No winning score!")
                         sys.exit(1)
@@ -108,7 +108,7 @@ def main():
 
             except IndexError: # 3 man game since there were less than 8 arguments
 
-                # verify there is exactly one winning (>10) score
+                # verify there is exactly one winning (>=10) score
                 if winners < 1:
                     print ("No winning score!")
                     sys.exit(1)
