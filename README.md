@@ -6,7 +6,9 @@ To run:
 `$ python3 run.py [--option] <arg0> <arg1>`
 
 Options:
-  -h, --help            show this help message and exit
+  -h, --help            
+  
+    show this help message and exit
   
   --create_match=CREATE_MATCH
   
@@ -27,7 +29,9 @@ Options:
                         Return database user id for user displayName i.e.
                         --get_user_id cnevz
                         
-  --has_user=HAS_USER   Check if user exists i.e. --has_user cnevz
+  --has_user=HAS_USER   
+  
+    Check if user exists i.e. --has_user cnevz
   
   --user_last_match=USER_LAST_MATCH
   
