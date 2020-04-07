@@ -30,6 +30,7 @@ def main():
     parser.add_option("--get_leaderboard", action="store", dest="get_leaderboard", default=None,
                        help="Return SettleBoard leaderboard i.e. --get_leaderboard=True")
     parser.add_option("--create_user", action="store", dest="create_user", default=None, help=CREATE_USER_HELP)
+    parser.add_option("--authenticate_user", action="store", dest="authenticate_user", default=None, help="Validate user")
 
     # read command line input
     (options, _) = parser.parse_args()
@@ -167,6 +168,15 @@ def main():
             name = str(sys.argv[2])
             password = str(sys.argv[3])
             response = sb.make_user(name, password)
+            print (response)
+        except IndexError: # have 1 or 0 input arguments, need 2
+            print ("Provide a name and password!")
+
+    elif options.authenticate_user:
+        try:
+            name = str(sys.argv[2])
+            password = str(sys.argv[3])
+            response = sb.authenticate_user(name, password)
             print (response)
         except IndexError: # have 1 or 0 input arguments, need 2
             print ("Provide a name and password!")

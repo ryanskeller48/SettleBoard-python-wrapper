@@ -45,6 +45,7 @@ class Settleboard:
         """ helper to do API POST calls """
 
         all_headers = {"Authorization": self.auth_header}
+
         if headers:
             for header in headers:
                 all_headers[header] = headers[header]
